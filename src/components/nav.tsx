@@ -29,16 +29,16 @@ export function Nav() {
 
         {/* Desktop */}
         <div className="hidden md:flex gap-12 text-sm font-medium tracking-widest uppercase">
-          <Link href="#music" className="hover:text-brand transition-colors">
+          <Link href="/music" className="hover:text-brand transition-colors">
             Music
           </Link>
-          <Link href="#code" className="hover:text-brand transition-colors">
+          <Link href="/code" className="hover:text-brand transition-colors">
             Code
           </Link>
-          <Link href="#photo" className="hover:text-brand transition-colors">
+          <Link href="/photo" className="hover:text-brand transition-colors">
             Photo
           </Link>
-          <Link href="#about" className="hover:text-brand transition-colors">
+          <Link href="/#about" className="hover:text-brand transition-colors">
             About
           </Link>
         </div>
@@ -78,28 +78,28 @@ export function Nav() {
       {menuOpen && (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md px-6 py-6 flex flex-col gap-4 text-sm font-medium tracking-widest uppercase">
           <Link
-            href="#music"
+            href="/music"
             onClick={() => setMenuOpen(false)}
             className="hover:text-brand transition-colors"
           >
             Music
           </Link>
           <Link
-            href="#code"
+            href="/code"
             onClick={() => setMenuOpen(false)}
             className="hover:text-brand transition-colors"
           >
             Code
           </Link>
           <Link
-            href="#photo"
+            href="/photo"
             onClick={() => setMenuOpen(false)}
             className="hover:text-brand transition-colors"
           >
             Photo
           </Link>
           <Link
-            href="#about"
+            href="/#about"
             onClick={() => setMenuOpen(false)}
             className="hover:text-brand transition-colors"
           >

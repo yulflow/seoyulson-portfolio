@@ -1,11 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function BentoGrid() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-20" id="work">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px] md:auto-rows-[350px]">
         {/* Music Card (Large) */}
-        <article
+        <Link
+          href="/music"
           id="music"
           className="bento-card relative md:col-span-8 md:row-span-2 overflow-hidden border border-border rounded-2xl group cursor-pointer"
         >
@@ -26,10 +28,11 @@ export function BentoGrid() {
               synthesis. Based in Seoul, performing globally.
             </p>
           </div>
-        </article>
+        </Link>
 
         {/* Code Card (Top Right) */}
-        <article
+        <Link
+          href="/code"
           id="code"
           className="bento-card relative md:col-span-4 overflow-hidden border border-border bg-surface rounded-2xl p-8 group cursor-pointer flex flex-col justify-between"
         >
@@ -55,10 +58,11 @@ export function BentoGrid() {
               Crafting immersive web experiences with clean code.
             </p>
           </div>
-        </article>
+        </Link>
 
         {/* Photo Card (Bottom Right) */}
-        <article
+        <Link
+          href="/photo"
           id="photo"
           className="bento-card relative md:col-span-4 overflow-hidden border border-border bg-surface rounded-2xl group cursor-pointer"
         >
@@ -88,7 +92,7 @@ export function BentoGrid() {
               </div>
             </div>
           </div>
-        </article>
+        </Link>
       </div>
     </section>
   );
