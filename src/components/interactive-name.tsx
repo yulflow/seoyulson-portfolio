@@ -82,7 +82,7 @@ export function InteractiveName() {
 
       ctx!.fillStyle = "white";
       const fontSize = Math.min(drawWidth / 6, 150);
-      ctx!.font = `900 ${fontSize}px var(--font-geist-sans), Inter, sans-serif`;
+      ctx!.font = `900 ${fontSize}px "Geist", "Inter", "Arial", sans-serif`;
       ctx!.textAlign = "center";
       ctx!.textBaseline = "middle";
       ctx!.fillText("SEOYUL SON", drawWidth / 2, drawHeight / 2);
@@ -129,8 +129,11 @@ export function InteractiveName() {
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("resize", initCanvas);
 
-    initCanvas();
-    animate();
+    // 폰트 로드 후 Canvas 초기화 (폰트 없으면 텍스트 픽셀이 0이라 파티클 생성 안 됨)
+    document.fonts.ready.then(() => {
+      initCanvas();
+      animate();
+    });
 
     return () => {
       cancelAnimationFrame(animationId);
